@@ -1,0 +1,130 @@
+.profile {
+    display: flex;
+    justify-content: space-between;
+
+    &__user {
+        margin-left: 24px;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+        font-family: 'Montserrat', sans-serif;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/dots.svg);
+            background-repeat: no-repeat;
+            top: 3px;
+            right: 0px;
+        }
+    }
+
+    &__nickname {
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    &__edit {
+        position: relative;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #F05D63;
+        margin-top: 16px;
+        margin-left: 28px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__edit::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/pensil.svg);
+        background-repeat: no-repeat;
+        left: -28px;
+    }
+
+    &__dropdown {
+        position: relative;
+        top: -50px;
+        left: 10px;
+    
+        &:hover .profile__list {
+            display: block;
+        }
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        right: -160px;
+        border-top: 24px solid rgb(255, 255, 255, 0.94);
+        border-bottom: 24px solid rgb(255, 255, 255, 0.94);
+        border-radius: 8px;
+    
+        & li {
+            background-color: rgba(255, 255, 255, 0.94);
+            width: 176px;
+            padding: 0px 20px 20px;
+            backdrop-filter: blur(21.7463px);
+    
+            &:hover {
+                background-color: rgba(236, 241, 248, 0.6);
+            }
+        }
+    
+        & a {
+            line-height: 19px;
+            font-weight: 600;
+        }
+    
+        &-report {
+            position: relative;
+            margin-left: 36px;
+            margin-top: 24px;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/edit.svg);
+                width: 20px;
+                height: 20px;
+                top: 0;
+                left: -36px;
+                background-repeat: no-repeat;
+    
+                &:hover {
+                    background-color: rgba(236, 241, 248, 0.6);
+                }
+            }
+        }
+    
+        &-block {
+            position: relative;
+            margin-left: 36px;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../images/block.svg);
+                width: 20px;
+                height: 20px;
+                top: 0;
+                left: -36px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+
+}
+
+   
+
+    

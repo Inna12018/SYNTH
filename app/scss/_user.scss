@@ -1,0 +1,14 @@
+.user {
+    margin-top: 76px;
+    position: relative;
+
+    &__inner {
+        display: flex;
+        margin-bottom: 156px;
+    }
+
+    &__aside {
+        margin-right: 47px;
+        max-width: 350px;
+    }
+}

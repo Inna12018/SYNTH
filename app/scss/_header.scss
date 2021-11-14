@@ -1,0 +1,73 @@
+.header {
+    background-color: #fff;
+    padding: 23px 0;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+
+    &__inner {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__user {
+        background-color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    &__icon {
+        background-image: url(../images/user.png);
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        font-size: cover;
+    }
+
+    &__avatar {
+        margin-left: 20px;
+        position: relative;
+        padding-right: 38px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/arrow.svg);
+            background-repeat: no-repeat;
+            top: 8px;
+            left: 45px;
+        }
+    }
+
+    & .bell {
+        background-image: url(../images/bell.svg);
+        margin-left: 45px;
+    }
+
+    & .gift {
+        background-image: url(../images/gift.svg);
+    }
+
+    & .medium {
+        background-image: url(../images/medium.svg);
+    }
+
+    
+}

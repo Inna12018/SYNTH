@@ -1,0 +1,30 @@
+.button{
+    position: absolute;
+    top: -107px;
+    right: 15px;
+
+    &__action {
+        height: 64px;
+        background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+        border-radius: 50%;
+        border: none;
+        width: 64px;
+        position: relative;
+        right: 0;
+    
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            background-image: url(../images/plus.svg);
+    
+        }
+}
+
+
+
+
+}
