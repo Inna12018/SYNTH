@@ -126,18 +126,18 @@ ul, li {
     }
 }
 
-.user__details{
+.user{
     margin-top: 76px;  
+    &__inner{
+        display: flex;
+        margin-bottom: 156px;
+    }
+    &__aside{
+        margin-right: 47px;
+        max-width: 350px; 
+    }
 }
 
-.user__inner{
-    display: flex;
-}
-
-.user__aside{
-    margin-right: 47px;
-    max-width: 350px;  
-}
 
 .profile__inner{
     display: flex;
@@ -242,6 +242,7 @@ ul, li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 62px;
         &__item{
         max-width: 374px;
         width: 100%;
