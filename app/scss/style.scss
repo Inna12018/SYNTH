@@ -34,7 +34,17 @@ ul, li {
     background-color: #fff;
     padding: 23px 0;
     box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
-    &__info-text {
+    &__inner {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__user{
+        background-color: #fff;
+        border: none;
+    }
+    &__text {
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;       
@@ -42,31 +52,40 @@ ul, li {
         color: #3E3F58;
         font-family: 'Open Sans', sans-serif;
     }
-    &__info-img {
+    &__icon{
+        background-image: url(../images/user.png); 
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        font-size: cover;
+    }
+    &__avatar{         
         margin-left: 20px;
         position: relative;
+        padding-right: 38px;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/path.png);
+            background-repeat: no-repeat;
+            top: 8px;
+            left: 45px;
+        }
     }
-    &__info-img::before{
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-image: url(../images/path.png);
-        background-repeat: no-repeat;
-        top: 8px;
-        left: 45px;
+    & .bell {
+        background-image: url(../images/bell.svg);
+        margin-left: 45px;       
     }
-    &__info-bell {
-        margin-left: 45px;
-    }  
+    & .gift {
+        background-image: url(../images/gift.svg);      
+    }
+    & .medium {
+        background-image: url(../images/medium.svg);       
+    }
 }
 
-.header__top-inner {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .header__menu-link {
     color: #3E3F58;;
@@ -105,25 +124,38 @@ ul, li {
 }
 
 .header__button {
-    position: absolute;
-    right: 15px;
-    &-inner{
-        height: 64px;
-        background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
-        border-radius: 50%;
-        width: 64px;
-    }
-    &-row{
-        background:#fff;
+    height: 64px;
+    background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+    border-radius: 50%;
+    border: none;
+    width: 64px;
+    position: relative;
+    right: 0;
+    &::after{
+        content: "";
+        width: 20px;
         height: 20px;
         position: absolute;
+        right: 22px;
         top: 22px;
-        left: 30px;
-        width: 2px;
+        background-image: url(../images/plus.svg);
+
     }
-    &-row2{
-        transform: rotate(-90deg);
-    }
+    
+
+       
+
+    // &-row{
+    //     background:#fff;
+    //     height: 20px;
+    //     position: absolute;
+    //     top: 22px;
+    //     left: 30px;
+    //     width: 2px;
+    // }
+    // &-row2{
+    //     transform: rotate(-90deg);
+    // }
 }
 
 .user{
@@ -139,32 +171,30 @@ ul, li {
 }
 
 
-.profile__inner{
+.profile{
     display: flex;
     justify-content: space-between;
- 
-}
-.profile__user{
-    margin-left: 24px;
-    &-name{
+    &__user{
+        margin-left: 24px;  
         position: relative;
         font-weight: 600;
         font-size: 24px;
         line-height: 26px;
         color: #3E3F58;
-        font-family: 'Montserrat', sans-serif;
-        }  
-    &-name::after{
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background-image: url(../images/dots_menu.png);
-        background-repeat: no-repeat;
-        top: 3px;
-        right: 0px;
-        }
-    &-email{
+        font-family: 'Montserrat', sans-serif;    
+        &::after{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/dots_menu.png);
+            background-repeat: no-repeat;
+            top: 3px;
+            right: 0px;
+         }
+    }
+         
+    &__email{
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;       
@@ -173,7 +203,7 @@ ul, li {
         font-family: 'Open Sans', sans-serif;
         margin-top: 8px;
     }
-    &-edit{
+    &__edit{
         position: relative;
         font-weight: 400;
         font-size: 16px;
@@ -184,7 +214,7 @@ ul, li {
         margin-top: 16px;
         margin-left: 28px;
     }
-    &-edit::before{
+    &__edit::before{
         content: "";
         position: absolute;
         width: 20px;
@@ -192,18 +222,10 @@ ul, li {
         background-image: url(../images/pensil.png);
         background-repeat: no-repeat;
         left: -28px;
-
     }
 }
 
-.dots{
-    width: 4px;
-    height: 4px;
-    border: 2px solid #3E4056;
-    box-sizing: border-box;
-    margin-bottom: 4px;
-    border-radius: 50%;
-}
+
 
 .followers{
     display: flex;
@@ -238,18 +260,49 @@ ul, li {
     } 
 }
 
+
 .discussion{
+    &__inner{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 62px;
-        &__item{
-        max-width: 374px;
-        width: 100%;
+    }
+    &__item{
+    max-width: 374px;
+    width: 100%;
+    background-color: #fff;
+    padding: 56px 24px 27px;
+    border-radius: 8px;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.07);
+    }
+    &__title{      
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+        color: #3E4056;
+    }
+    &__autor{
+        display: flex;
+        align-items: center;
+        &-name{
+            margin-left: 8px;
+            font-size: 14px;
+            line-height: 16px;           
+            color: #3E4056;
+            font-family: OpenSans;
+            font-weight: 600;
+        }
+    }
+    &__share{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #F05D63;
         background-color: #fff;
-        padding: 56px 24px 27px;
-        border-radius: 8px;
-        box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.07);
+        border: none;
     }
     & .views{
         padding: 24px 24px 27px;
@@ -286,25 +339,8 @@ ul, li {
             }
         }
     }
-    &__title{      
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 44px;
-        color: #3E4056;
-    }
-    &__autor{
-        display: flex;
-        align-items: center;
-        &-name{
-            margin-left: 8px;
-            font-size: 14px;
-            line-height: 16px;           
-            color: #3E4056;
-            font-family: OpenSans;
-            font-weight: 600;
-        }
-    }
+ 
+    
     &__views{
         padding-left: 20px;
         position: relative;
@@ -348,14 +384,9 @@ ul, li {
         justify-content: space-between;
         min-height: 24px;
     }
-    &__share{
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
-        color: #F05D63;
-    }
+    
 }
+
 
 .views{
     margin-top: 24px;
@@ -494,4 +525,4 @@ label:active:after {
 
 
 
-
+@import "../scss/media";

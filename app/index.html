@@ -18,115 +18,116 @@
 <body>
 
     <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="header__top-inner">
-                    <div class="header__logo">
-                        <a class="header__logo-link" href="#">
-                            <img src="images/logo.png" alt="logo" />
-                        </a>
-                    </div>
+        <div class="container">
 
-                    <div class="header__info">
-                        <a class="header__info-text" href="#">Arthur Wood</a>
-                        <a class="header__info-img" href="#"><img src="images/user.png" alt="user"></a>
+            <div class="header__inner">
+
+                <a class="header__logo" href="#">
+                    <img src="images/logo.svg" alt="logo" />
+                </a>
+
+
+                <div class="header__info">
+
+                    <button class="header__user" type="button">
+                        <a class="header__text" href="#">Arthur Wood</a>
+                        <a class="header__avatar" href="#"><img src="images/user.png" alt="user"></a>
+                    </button>
+
+                    <ul>
+                        <li>
+                            <a href="#" class="header__icon bell"></a>
+                            <a href="#" class="header__icon gift"></a>
+                            <a href="#" class="header__icon medium"></a>
+                        </li>
+                    </ul>
+                    <!-- 
                         <a class="header__info-bell" href="#"><img src="images/bell.svg" alt="bell"></a>
                         <a class="header__info-gift" href="#"><img src="images/gift.svg" alt="gift"></a>
-                        <a class="header__info-medium" href="#"><img src="images/medium.svg" alt="medium"></a>
-
-                    </div>
+                        <a class="header__info-medium" href="#"><img src="images/medium.svg" alt="medium"></a> -->
                 </div>
             </div>
         </div>
 
 
+
         <nav class="header__menu">
             <div class="container">
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link">FEED</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">EXPLORE</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">DISCUSSIONS</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">feed</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">explore</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">discussions</a></li>
                 </ul>
 
-                <div class="header__button">
+                <button class="header__button" type="button">
+
+                </button>
+
+                <!-- <div class="header__button">
                     <div class="header__button-inner">
                         <div class="header__button-row"></div>
                         <div class="header__button-row header__button-row2"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </nav>
     </header>
 
 
 
-    <div class="user">
+
+
+    <main class="user">
         <div class="container">
 
             <div class="user__inner">
 
-                <aside class="user__aside">
+                <div class="user__aside">
                     <div class="profile">
-                        <div class="profile__inner">
-                            <div class="profile__avatar">
-                                <img src="images/avatar.png" alt="avatar">
-                            </div>
-                            <div class="profile__user">
-                                <div class="profile__user-name">
-                                    Benjamin
-                                    Clementine
-                                    <ul class="profile__nav">
-                                        <li class="profile__dropdown">
-                                            <a href="#" data-toggle="dropdown"></a>
-                                            <ul class="profile__list">
-                                                <li><a class="profile__list-report" href="#">Report User</a></li>
-                                                <li><a class="profile__list-block" href="#">Block User</a></li>
-                                            </ul>
-                                        </li>
+                        
+                        <div class="profile__avatar">
+                            <img src="images/avatar.png" alt="avatar">
+                        </div>
+
+                        <div class="profile__user">
+                            Benjamin Clementine
+
+                            <ul class="profile__nav">
+                                <li class="profile__dropdown">
+                                    <a href="#" data-toggle="dropdown"></a>
+                                    <ul class="profile__list">
+                                        <li><a class="profile__list-report" href="#">Report User</a></li>
+                                        <li><a class="profile__list-block" href="#">Block User</a></li>
                                     </ul>
-                                </div>
+                                </li>
+                            </ul>
+                            <a class="profile__email" href="#">@benclementine</a>
 
-                                <a class="profile__user-email" href="mailto:synyh@benclementine.ua">@benclementine</a>
-
-                                <div class="profile__user-edit">
-                                    Edit Profile
-                                </div>
-
-                            </div>
+                            <a class="profile__edit" href="#">
+                                Edit Profile
+                            </a>
                         </div>
                     </div>
 
 
-                    <div class="followers">
-                        <div class="followers__item">
-                            45
-                            <span>synths</span>
-                        </div>
+                    <ul class="followers">
+                        <li class="followers__item"> 45 <span>synths</span></li>
+                        <li class="followers__item"> 110 <span>followers</span></li>
+                        <li class="followers__item">  322 <span>following</span></li>
+                    </ul>
 
-                        <div class="followers__item">
-                            110
-                            <span>followers</span>
-                        </div>
-
-                        <div class="followers__item">
-                            322
-                            <span>following</span>
-                        </div>
-
-                    </div>
-
-                    <div class="followers__description">
+                    <p class="followers__description">
                         Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30
                         percent
                         each,
                         according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP,
                         bitcoin and
                         Ethereum.
-                    </div>
-                </aside>
+                    </p>
+                </div>
 
 
-                <div class="discussion__inner">
+                <div class="discussion">
                     <!-- sweetch -->
 
                     <div class="switch">
@@ -142,7 +143,7 @@
                         </div>
                     </div>
 
-                    <div class="discussion">
+                    <div class="discussion__inner">
 
                         <div class="discussion__item">
 
@@ -160,9 +161,9 @@
                                     </a>
                                 </div>
 
-                                <a class="discussion__share" href="#">
+                                <button type="button" class="discussion__share" href="#">
                                     Share
-                                </a>
+                                </button>
 
                             </div>
                         </div>
@@ -183,9 +184,9 @@
                                     </a>
                                 </div>
 
-                                <a class="discussion__share" href="#">
+                                <button type="button" class="discussion__share" href="#">
                                     Share
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -263,12 +264,12 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
 
 
 
+    </main>
 
 
 
