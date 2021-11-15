@@ -15,6 +15,7 @@
         line-height: 36px;
 
     }
+
     .dots {
         right: -40px;
     }
@@ -51,15 +52,15 @@
     }
 }
 
-
-
 @media(max-width: 657px) {
     .user__asid {
         margin-right: 20px;
     }
+
     .dots__list {
         right: 40px;
         z-index: 2;
+
         &-active {
             right: 40px;
             z-index: 2;
@@ -69,7 +70,7 @@
 
 }
 
-@media(max-width: 490px){
+@media(max-width: 490px) {
     .discussion__top {
         display: none;
     }
@@ -80,5 +81,3 @@
     }
 
 }
-
-
