@@ -28,6 +28,11 @@
         margin-left: 28px;
         font-size: 16px;
         line-height: 20px;
+
+        &:hover {
+            color:#f0393f ;
+
+        }
     }
 
     &__edit::before {

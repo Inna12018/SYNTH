@@ -1,16 +1,46 @@
 @media(max-width: 1191px) {
     .discussion__item {
         max-width: 100%;
-        margin-bottom: 20px;
     }
 }
 
-@media(max-width: 730px) {
+@media(max-width: 790px) {
     .discussion__title {
         font-size: 24px;
         line-height: 36px;
     }
+    .user__inner{
+        flex-wrap: wrap;
+
+    }
+    .user__aside {
+        max-width: 100%;
+    }
+
+    .profile {
+        justify-content: flex-start;
+
+        &__nickname {
+            display: block;
+
+        }
+    }
+
+    .followers {
+        justify-content: space-around;
+
+        &__description {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    .header .bell {
+        margin-left: 0;
+    }
 }
+
+
 
 @media(max-width: 657px) {
     .user__asid {
