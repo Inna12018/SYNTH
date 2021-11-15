@@ -1,0 +1,98 @@
+.dots {
+    position: absolute;
+    right: 0;
+    top: 0px;
+
+    &__nav {
+        width: 40px;
+        height: 60px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        &:hover .dots__list {
+            display: block;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/dots.svg);
+        background-repeat: no-repeat;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__dropdown {
+        position: relative;
+        top: -50px;
+        left: 10px;
+
+     
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        right: -150px;
+        top: 70px;
+        border-top: 24px solid rgb(255, 255, 255, 0.94);
+        border-bottom: 24px solid rgb(255, 255, 255, 0.94);
+        border-radius: 8px;
+
+        & li {
+            background-color: rgba(255, 255, 255, 0.94);
+            width: 176px;
+            padding: 0px 20px 20px;
+            backdrop-filter: blur(21.7463px);
+
+            &:hover {
+                background-color: rgba(236, 241, 248, 0.6);
+            }
+        }
+
+        & a {
+            line-height: 19px;
+            font-weight: 600;
+        }
+    }
+
+    &__report {
+        position: relative;
+        margin-left: 36px;
+        margin-top: 24px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/edit.svg);
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: -36px;
+            background-repeat: no-repeat;
+
+            &:hover {
+                background-color: rgba(236, 241, 248, 0.6);
+            }
+        }
+    }
+
+    &__block {
+        position: relative;
+        margin-left: 36px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/block.svg);
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: -36px;
+            background-repeat: no-repeat;
+        }
+    }
+}
