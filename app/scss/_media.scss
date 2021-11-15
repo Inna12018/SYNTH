@@ -2,6 +2,11 @@
     .discussion__item {
         max-width: 100%;
     }
+
+    .dots {
+        right: -20px;
+        top: -4px;
+    }
 }
 
 @media(max-width: 790px) {
@@ -9,6 +14,9 @@
         font-size: 24px;
         line-height: 36px;
 
+    }
+    .dots {
+        right: -40px;
     }
 
     .user__inner {
@@ -52,14 +60,16 @@
 
 }
 
-@media(max-width: 460px){
+@media(max-width: 490px){
     .discussion__top {
         display: none;
     }
+
     .dots {
         right: -20px;
         top: -4px;
     }
+
 }
 
 
