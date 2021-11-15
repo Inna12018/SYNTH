@@ -60,6 +60,11 @@
     .dots__list {
         right: 40px;
         z-index: 2;
+        &-active {
+            right: 40px;
+            z-index: 2;
+
+        }
     }
 
 }
